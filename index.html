@@ -1,82 +1,139 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>django-uni-form (Django Uni-Form) &mdash; django-uni-form v0.7 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.7',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="django-uni-form v0.7 documentation" href="" />
+    <link rel="next" title="Installing django-uni-form" href="install.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="modindex.html" title="Global Module Index"
+             accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installing django-uni-form"
+             accesskey="N">next</a> |</li>
+        <li><a href="">django-uni-form v0.7 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
 
-	<title>pydanny/django-uni-form @ GitHub</title>
-	
-	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #3c94b2;
-		  font-family: "Helvetica,Arial,FreeSans";
-  		color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #c36b4d; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #c36b4d; }
-    h3 { text-align: center; color: #c36b4d; }
-    a { color: #c36b4d; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-	</style>
-	
-</head>
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="django-uni-form-django-uni-form">
+<h1>django-uni-form (Django Uni-Form)<a class="headerlink" href="#django-uni-form-django-uni-form" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="http://djangoproject.com">Django</a> forms are easily rendered as tables,
+paragraphs, and unordered lists. However, elegantly rendered div based forms
+are something you have to do by hand. The purpose of this application is to
+provide a simple tag and/or filter that lets you quickly render forms in a div
+format.</p>
+<p><a class="reference external" href="http://sprawsm.com/uni-form">Uni-form</a> has been selected as the base model for the design of the forms.</p>
+<p>Django Uni-Form lets you easily display Django forms as divs.</p>
+<p>Contents:</p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="install.html">Installing django-uni-form</a></li>
+<li class="toctree-l1"><a class="reference external" href="usage.html">Ways to use Django-uni-form</a><ul>
+<li class="toctree-l2"><a class="reference external" href="usage.html#using-the-django-uni-form-filter-easy-and-fun">Using the django-uni-form filter (Easy and fun!)</a></li>
+<li class="toctree-l2"><a class="reference external" href="usage.html#using-the-django-uni-form-templatetag-in-your-view-intermediate">Using the django-uni-form templatetag in your view (Intermediate)</a></li>
+<li class="toctree-l2"><a class="reference external" href="usage.html#using-the-django-uni-form-templatetag-in-your-form-class-intermediate">Using the django-uni-form templatetag in your form class (Intermediate)</a></li>
+<li class="toctree-l2"><a class="reference external" href="usage.html#using-the-django-uni-form-templatetag-to-change-action-method-intermediate">Using the django-uni-form templatetag to change action/method (Intermediate)</a></li>
+<li class="toctree-l2"><a class="reference external" href="usage.html#adding-a-layout-to-your-form-class-intermediate">Adding a layout to your form class (Intermediate)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="helpers.html">uni_form.helpers API</a></li>
+<li class="toctree-l1"><a class="reference external" href="uni_form_tags.html">uni_form.templatetags.uni_form_tags API</a></li>
+</ul>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference external" href="modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference external" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
 
-<body>
-  <a href="http://github.com/pydanny/django-uni-form"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
-  <div id="container">
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference external" href="">django-uni-form (Django Uni-Form)</a><ul>
+</ul>
+</li>
+<li><a class="reference external" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
 
-    <div class="download">
-      <a href="http://github.com/pydanny/django-uni-form/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/pydanny/django-uni-form/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="install.html"
+                                  title="next chapter">Installing django-uni-form</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/index.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
     </div>
-
-    <h1><a href="http://github.com/pydanny/django-uni-form">django-uni-form</a>
-      <span class="small">by <a href="http://github.com/pydanny">pydanny</a></span></h1>
-
-    <div class="description">
-      Django forms are easily rendered as tables, paragraphs, and unordered lists. However, elegantly rendered div based forms is something you have to do by hand. The purpose of this application is to provide a simple tag and/or filter that lets you quickly render forms in a div format.
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="modindex.html" title="Global Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installing django-uni-form"
+             >next</a> |</li>
+        <li><a href="">django-uni-form v0.7 documentation</a> &raquo;</li> 
+      </ul>
     </div>
-
-    <h2>License</h2>
-<p>MIT/BSD</p>
-<h2>Authors</h2>
-<p>CrowdSense (admin@DevBook.home)<br/>Alison Rowland (alisonrowland@fastmail.fm)<br/>Brian Rosner (brosner@gmail.com)<br/>Chris Adams (chris@improbable.org)<br/>James Tauber (jtauber@jtauber.com)<br/>Karl Bowden (karlbowden@gmail.com)<br/>mvaerle (mvaerle@perfectblue.nl)<br/>Patrick Lauber (patrick.lauber@divio.ch)<br/>pydanny (pydanny@gmail.com)<br/>Daniel Greenfeld (pydanny@new-host-2.home)<br/>Skylar Saveland (skylar.saveland@gmail.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Daniel Greenfeld (pydanny@gmail.com)<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/pydanny/django-uni-form/zipball/master">zip</a> or
-      <a href="http://github.com/pydanny/django-uni-form/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/pydanny/django-uni-form</pre>
-    </p>
-
     <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/pydanny/django-uni-form">pydanny/django-uni-form</a>
+      &copy; Copyright 2010, Daniel Greenfeld.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.2.
     </div>
-
-  </div>
-
-  
-</body>
+  </body>
 </html>
