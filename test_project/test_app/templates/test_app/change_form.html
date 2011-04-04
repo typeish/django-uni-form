@@ -1,5 +1,6 @@
 {% extends "admin/base_site.html" %}
 {% load i18n admin_modify adminmedia %}
+{% load uni_form_tags %}
 
 {% block extrahead %}{{ block.super }}
 {% url admin:jsi18n as jsi18nurl %}
@@ -41,9 +42,14 @@
     {{ adminform.form.non_field_errors }}
 {% endif %}
 
+{# Render adminform using uni_form instead of Django's way (below) #}
+{{ adminform.form|as_uni_form }}
+
+{% comment %}
 {% for fieldset in adminform %}
     {% include "admin/includes/fieldset.html" %}
 {% endfor %}
+{% endcomment %}
 
 {% block after_field_sets %}{% endblock %}
 
